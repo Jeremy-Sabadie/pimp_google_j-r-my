@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css"><!--lien vers le css-->
+		<title>Google</title><!--titre pour moteur de recherche-->
+	</head>
+
+	<body>
+		<div class="haut">
+			<table class="tabhaut"><!--tableau à 1 ligne et 4 colonnes-->
+				<tr>
+					<td><a href="https://mail.google.com/mail/?tab=wm">Gmail</a> </td>
+					<td><a href="https://www.google.fr/imghp?hl=fr&tab=wi">Image</a></td>
+					<td><a href="https://www.google.fr/intl/fr/options/">
+					<img src="carre.png"></a></td>
+					<td><form action="https://accounts.google.com/ServiceLogin?hl=fr&passive=true&continue=https://www.google.fr/"><input class="connexion" type="sub" name="connexion" value="Connexion"></form></td>
+				</tr>
+			</table><!--fin du tableau-->
+
+		</div>
+		<div id="centre"><!--Nouvelle div pour la partie centrale de la page-->
+			<div><img src="google.svg"></img><!--logo google-->
+			</div>
+			<div > 
+				<form><!--le code entre les balises <script> ne correspond pas du tout à la méthode pour l'exercice à faire mais m'a permis d'afficher une barre qui fait une vraie recheche-->
+					<script id="barre"> 
+			  			(function() {
+			    		var cx = '003535769803309130261:4hkogxsc2wi';
+			    		var gcse = document.createElement('script');
+			    		gcse.type = 'text/javascript';
+			   			gcse.async = true;
+			    		gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			    		var s = document.getElementsByTagName('script')[0];
+			    		s.parentNode.insertBefore(gcse, s);
+			  			})();
+					</script>
+					<gcse:search></gcse:search><br><br><br>
+					<input type="submit" name="recherche" value="Recherche Google"><!--bouton recherche-->
+					<input type="submit" name="chance" value="J'ai de la chance"><!--bouton chance-->
+				</form>
+			</div>
+		</div>
+
+		<button id="click" type="button" onclick='document.getElementById("demo") .innerHTML = "Hello JavaScript!"'>AFFICHER LES ÉLÉMENTS CENTRAUX</button><!--bouton d'affichage du message de départ-->
+		
+		<div id="modal" ><!--popUp-->
+			<h1>"Hey le site xxxvidsxxx est trop bien. Viens dessus stp please"</h1>
+			<button id="close" onclick="closemodal()">Fermer</button>
+		</div>
+		
+		<div class="pied"><!--div pour le pied de page-->
+			<table class="basgauche" ><!--tableau à 1 ligne et 1 colonne-->
+				<tr class="pays" >
+					<td>France</td>
+				</tr>
+				<tr class="piedgauche" ><!--tableau à 1 ligne et 3 colonnes-->
+					<td><a href="https://www.google.fr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjfsueL0s3YAhVL_qQKHapoAcwQkdQCCAo&url=https%3A%2F%2Fwww.google.fr%2Fintl%2Ffr_fr%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw2uB175PdVvu_s_Oh5IRJXX">Publicite</a>
+					</td>
+					<td><a href="https://www.google.fr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjfsueL0s3YAhVL_qQKHapoAcwQktQCCAs&url=https%3A%2F%2Fwww.google.fr%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw3oBerwhZw46LsPtxWHNJJA">Entreprise</a>
+					</td>
+					<td><a href="https://www.google.fr/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwjfsueL0s3YAhVL_qQKHapoAcwQkNQCCAw&url=https%3A%2F%2Fwww.google.fr%2Fintl%2Ffr_fr%2Fabout%2F%3Futm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&usg=AOvVaw1Jwo2vO2kGpzOPWCuzWlrz">A propos</a>
+					</td>
+				</tr>
+			</table><!--fin des tableaux-->
+			<table class="basdroite" >
+				<tr class="cheat"><td>cest pas beau mais ca fonctionne</td></tr><!--tableau invisible à 1 ligne et 1 colonne pour aligner celui d'en dessous. Pas beau mais efficace-->
+				<tr class="basdroite" ><!--tableau à 1 ligne et 3 colonnes-->
+					<td><a href="https://www.google.fr/intl/fr_fr/policies/privacy/?fg=1">Confidentialité</a>
+					</td>
+					<td><a href="https://www.google.fr/intl/fr_fr/policies/terms/?fg=1">Conditions</a>
+					</td>
+					<td><a href="https://www.google.fr/preferences?hl=fr">Paramètres</a>
+					</td>
+				</tr>
+			</table><!--fin du tableau-->
+		</div>
+		 <script src="main.js"></script><!--lien vers le fichier Javascript-->
+	</body>
